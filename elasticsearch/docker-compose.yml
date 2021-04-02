@@ -1,0 +1,24 @@
+version: "3.6"
+
+services:
+  elasticsearch:
+    container_name: 3km_elasticsearch
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+
+volumes:
+  data01:
+    driver: local
+    
+#Docker Networks
+#networks:
+#  default:
+#    external:
+#      name: localhost
