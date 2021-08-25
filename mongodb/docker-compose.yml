@@ -6,8 +6,8 @@ services:
     restart: always
     ports:
       - 27017:27017
-    hostname: 3km_mongodb
-    container_name: 3km_mongodb
+    hostname: mongodb
+    container_name: mongodb
     environment:
       MONGO_INITDB_ROOT_USERNAME: user_qa
       MONGO_INITDB_ROOT_PASSWORD: S@igon@2020QA
